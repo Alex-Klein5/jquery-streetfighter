@@ -5,6 +5,7 @@ $(document).ready(function(){
     })
     .mouseleave(function() {
         $('.ryu-still').show();
+        $('.ryu-throwing').hide();
         $('.ryu-ready').hide();
     })
     .mousedown(function(){
@@ -25,13 +26,13 @@ $(document).ready(function(){
     });
   
   	$('body').keydown(function (event){
-   		if (event.keyCode == 88) {
+   		if (event.keyCode === 88) {
    			$('.ryu-still').hide();
             $('.ryu-throwing').hide();
             $('.ryu-ready').hide();
     		$('.ryu-cool').show();
     	}
-    }
+    })
 	$('body').keyup(function(){
         $('.ryu-throwing').hide();
         $('.ryu-cool').hide();
